@@ -1,0 +1,138 @@
+ .lista-embalagens-apresentacao {
+     padding: 40px;
+     text-align: center;
+     background-color: #f8f8f8;
+ }
+
+ .lista-embalagens-apresentacao h2 {
+     color: #e64a19;
+     font-size: 2.5em;
+     margin-bottom: 30px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ .grid-embalagens {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     /* Cria colunas responsivas */
+     gap: 30px;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+ .card-embalagem-apresentacao {
+     background-color: #fff;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+     /* Garante que a imagem arredondada não vaze */
+     cursor: pointer;
+     transition: transform 0.3s ease-in-out;
+ }
+
+ .card-embalagem-apresentacao:hover {
+     transform: translateY(-5px);
+ }
+
+ .imagem-container {
+     width: 100%;
+     height: 200px;
+     /* Altura fixa para as imagens */
+     overflow: hidden;
+     /* Recorta a imagem para manter a proporção */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #f0f0f0;
+     /* Cor de fundo enquanto a imagem carrega */
+ }
+
+ .card-embalagem-apresentacao img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     /* Mantém a proporção e cobre o container */
+     border-top-left-radius: 8px;
+     border-top-right-radius: 8px;
+ }
+
+ .info-embalagem-apresentacao {
+     padding: 20px;
+     text-align: center;
+ }
+
+ .info-embalagem-apresentacao h3 {
+     margin-top: 0;
+     margin-bottom: 10px;
+     font-size: 1.4em;
+     color: #333;
+ }
+
+ .info-embalagem-apresentacao p {
+     color: #666;
+     margin-bottom: 8px;
+     font-size: 0.9em;
+ }
+
+ .info-embalagem-apresentacao .ver-detalhes {
+     display: inline-block;
+     background-color: #e64a19;
+     color: #fff;
+     padding: 10px 20px;
+     text-decoration: none;
+     border-radius: 5px;
+     font-size: 0.9em;
+     margin-top: 15px;
+     transition: background-color 0.3s ease-in-out;
+ }
+
+ .info-embalagem-apresentacao .ver-detalhes:hover {
+     background-color: #d14300;
+ }
+
+
+ .card-embalagem {
+     display: flex;
+     flex-direction: column;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     margin-bottom: 15px;
+     padding: 15px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     cursor: pointer;
+     transition: transform 0.2s ease-in-out;
+ }
+
+ .card-embalagem:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+ }
+
+ .card-embalagem img {
+     max-width: 100%;
+     height: auto;
+     border-radius: 4px;
+     margin-bottom: 10px;
+ }
+
+ .info-embalagem {
+     text-align: left;
+ }
+
+ .info-embalagem strong {
+     font-weight: bold;
+     color: #333;
+ }
+
+ .info-embalagem h3 {
+     margin-top: 0;
+     margin-bottom: 8px;
+     color: #007bff;
+ }
+
+ .info-embalagem p {
+     margin-bottom: 5px;
+     color: #555;
+ }

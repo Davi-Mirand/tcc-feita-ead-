@@ -1,0 +1,6 @@
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--cor-quintinaria);
+    color: var(--cor-secundaria);
+}

@@ -1,0 +1,89 @@
+.titulo {
+    background-color:var(--cor-terciaria);
+    color: #fff5e0;
+    text-align: left;
+    padding: 4em 2em;
+}
+
+.titulo h1 {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.titulo span {
+    color: white;
+}
+
+.titulo p {
+    margin: 1em 0;
+    max-width: 500px;
+}
+
+.btn-primary {
+    background-color: #6b0f0f;
+    color: white;
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.secao {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.embalagem-alimento {
+    background-color: #fef9f2;
+}
+
+.embalagem-alimento h2 {
+    color: #c13b1a;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.cards img{
+    width:8em;
+}
+
+
+
+.outro {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.outro img{
+    width: 42em;
+    margin: -324px;
+}
+
+.half {
+    flex: 1;
+    padding: 2em;
+}
+
+.cosmetic {
+    background-color: #fcebd9;
+    color: #771818;
+}
+
+.chemical {
+    background-color: #901313;
+    color: white;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}

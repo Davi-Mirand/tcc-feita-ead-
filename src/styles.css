@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+:root {
+    --cor-primaria: #ba3e00;
+    --cor-secundaria: #ffffff;
+    --cor-terciaria: #c13b1a;
+    --cor-quarternaria: #970000;
+    --cor-quintinaria: #2b2929;
+    --cor-quinaria:#ff5500;
+
+
+    --cor-fundo:#fff5e0;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #a89f9f49;
+    color: var(--cor-quintinaria);
+}

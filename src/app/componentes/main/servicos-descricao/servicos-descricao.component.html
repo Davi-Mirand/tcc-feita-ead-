@@ -1,0 +1,16 @@
+<div *ngIf="embalagemDetalhe">
+    <h2>Detalhes da Embalagem</h2>
+    <img [src]="embalagemDetalhe.urlimg" [alt]="embalagemDetalhe.nome">
+    <p><strong>ID:</strong> {{ embalagemDetalhe.id }}</p>
+    <p><strong>Nome:</strong> {{ embalagemDetalhe.nome }}</p>
+    <p><strong>Quantidade:</strong> {{ embalagemDetalhe.quantidade }}</p>
+    <p><strong>Descrição:</strong> {{ embalagemDetalhe.descricao }}</p>
+    <p><strong>Tipo:</strong> {{ embalagemDetalhe.tipo_embalagem }}</p>
+    <p><strong>Material:</strong> {{ embalagemDetalhe.material }}</p>
+    <button routerLink="/servicos">Voltar para Serviços</button>
+</div>
+
+<div *ngIf="!embalagemDetalhe">
+    <p>Carregando detalhes da embalagem...</p>
+    <button routerLink="/servicos">Voltar para Serviços</button>
+</div>

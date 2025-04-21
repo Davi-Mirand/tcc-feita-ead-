@@ -1,0 +1,17 @@
+<section class="lista-embalagens-apresentacao">
+    <h2>Nossas Embalagens</h2>
+    <div class="grid-embalagens">
+        <div *ngFor="let embalagem of embalagens" class="card-embalagem-apresentacao"
+            (click)="navegarParaDetalhe(embalagem.id)">
+            <div class="imagem-container">
+                <img [src]="embalagem.urlimg" [alt]="embalagem.nome">
+            </div>
+            <div class="info-embalagem-apresentacao">
+                <h3>{{ embalagem.nome }}</h3>
+                <p class="id-embalagem">ID: {{ embalagem.id }}</p>
+                <p class="quantidade-embalagem">Quantidade: {{ embalagem.quantidade }}</p>
+                <a class="ver-detalhes">Ver Detalhes</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,96 @@
+.sobre-nos {
+    background-color: #f8f8f8;
+    /* Um fundo claro para destacar a seção */
+    padding: 40px;
+    text-align: center;
+    /* Centraliza o texto "Sobre Nós" */
+}
+
+.sobre-nos .texto h2 {
+    color: #e64a19;
+    /* Uma cor vibrante para o título, combinando com a imagem */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    /* Deixa o título em caixa alta */
+    letter-spacing: 1px;
+    /* Espaçamento entre as letras para um visual moderno */
+}
+
+.sobre-nos .texto p {
+    color: #555;
+    /* Cor do texto principal */
+    line-height: 1.6;
+    /* Melhora a legibilidade do texto */
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.cards {
+    padding: 30px;
+    background-color: #fff;
+    /* Fundo branco para a seção de cards */
+}
+
+.cards ul {
+    list-style: none;
+    /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Alinha os cards horizontalmente */
+    justify-content: space-around;
+    /* Espaça os cards de forma uniforme */
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem para a próxima linha em telas menores */
+}
+
+.cards ul li {
+    background-color: #f2f2f2;
+    /* Um fundo sutil para cada card */
+    border-radius: 8px;
+    /* Bordas arredondadas para um visual mais suave */
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma leve sombra */
+    flex-basis: calc(33.33% - 40px);
+    /* Define a largura dos cards (aproximadamente 1/3) */
+    min-width: 250px;
+    /* Garante uma largura mínima para os cards */
+}
+
+.cards ul li h4 {
+    color: #333;
+    /* Cor do título do card */
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    /* Capitaliza a primeira letra de cada palavra */
+}
+
+.cards ul li img {
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse a largura do card */
+    height: auto;
+    border-radius: 4px;
+    /* Arredonda as bordas da imagem */
+    margin-top: 10px;
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+    .cards ul {
+        flex-direction: column;
+        /* Empilha os cards verticalmente em telas menores */
+        align-items: center;
+        /* Centraliza os itens */
+    }
+
+    .cards ul li {
+        flex-basis: 80%;
+        /* Ocupa mais largura em telas menores */
+        margin: 20px 0;
+    }
+}

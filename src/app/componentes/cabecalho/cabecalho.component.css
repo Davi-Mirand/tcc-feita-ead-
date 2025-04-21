@@ -1,0 +1,97 @@
+.cabecalho{
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    padding: 2em 1em;
+    justify-content: space-between;
+}
+
+.logo{
+    color: var(--cor-secundaria);
+    font-weight: 600;
+}
+
+.navbar-desktop{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+.navbar-desktop a{
+    display: flex;
+    align-items: center;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    padding: 3px;
+}
+
+.navbar-desktop a:hover{
+    background-color: var(--cor-terciaria);
+    box-shadow: 1px 1px 10px var(--cor-terciaria);
+    transition: 1s;
+    border-radius:12px;
+   
+}
+.menu-mobile{
+    display: none;
+}
+
+.navbar-mobile{
+        display: none;
+        padding: 2em;
+        background-color: var(--cor-primaria);
+    }
+@media screen and (max-width: 768px) {
+    .navbar-desktop{
+        display: none;
+    }
+    
+    .menu-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--cor-primaria);;
+    }
+
+    .menu-mobile input[type="checkbox"] {
+        display: none;
+    }
+
+    label.menu-sanduiche{
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url('/assets/menu.svg');
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: 2em;
+        padding: 5px;
+    }
+
+        label.menu-sanduiche:hover{
+            cursor: pointer;
+            background-color: var(--cor-quinaria);
+            border-radius: 12px;
+            transition: 1s;
+        }
+
+        .menu-mobile input[type="checkbox"]:checked ~ .navbar-mobile {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            background-color: var(--cor-primaria);
+            top:6em;
+            right:0;
+            transition: display 0.5s ease-in-out;
+        }
+
+        .navbar-mobile a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--cor-secundaria);
+        }
+    
+    
+}
+    
