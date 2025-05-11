@@ -6,9 +6,10 @@
     justify-content: space-between;
 }
 
-.logo{
-    color: var(--cor-secundaria);
-    font-weight: 600;
+.img-logo{
+    width: 75gpx;
+    border-radius: 100%;
+   
 }
 
 .navbar-desktop{

@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS tipos_embalagem (
 INSERT INTO tipos_embalagem (nome, quantidade, descricao, tipo_embalagem, material, urlimg) VALUES
 ('Pote de Vidro Pequeno', 100, 'Pote de vidro transparente para geleias e conservas.', 'Alimentícia', 'Vidro', '/assets/img/pote-vidro-pequeno.jpg'),
 ('Frasco Plástico com Pump', 50, 'Frasco plástico branco com pump dosador para loções.', 'Cosmético', 'Plástico PET', '/assets/img/frasco-plastico-pump.jpg'),
-('Caixa de Papelão Ondulado', 200, 'Caixa de papelão resistente para transporte de produtos.', 'Geral', 'Papelão', '/assets/img/caixa-papelao.jpg'),
-('Saco Metalizado para Alimentos', 150, 'Saco metalizado com fecho zip para embalar alimentos a vácuo.', 'Alimentícia', 'Metalizado', '/assets/img/saco-metalizado.jpg'),
-('Tubo de Alumínio Flexível', 75, 'Tubo de alumínio para cremes e pomadas.', 'Cosmético/Farmacêutico', 'Alumínio', '/assets/img/tubo-aluminio.jpg');
+('Caixa de Papelão Ondulado', 200, 'Caixa de papelão resistente para transporte de produtos.', 'Geral', 'Papelão', '/assets/img/caixa-papelao.avif'),
+('Saco Metalizado  para Alimentos', 150, 'Saco metalizado com fecho zip para embalar alimentos', 'Alimentícia', 'Metalizado', '/assets/img/saco-metalizado.jpg'),
+('Tubo de Alumínio Flexível', 75, 'Tubo de alumínio para cremes e pomadas.', 'Alimenticia', 'Alumínio', '/assets/img/saco-de-plastico.jpg');
 
