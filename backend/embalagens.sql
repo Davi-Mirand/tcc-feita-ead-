@@ -21,5 +21,5 @@ INSERT INTO tipos_embalagem (nome, quantidade, descricao, tipo_embalagem, materi
 ('Frasco Plástico com Pump', 50, 'Frasco plástico branco com pump dosador para loções.', 'Cosmético', 'Plástico PET', '/assets/img/frasco-plastico-pump.jpg'),
 ('Caixa de Papelão Ondulado', 200, 'Caixa de papelão resistente para transporte de produtos.', 'Geral', 'Papelão', '/assets/img/caixa-papelao.avif'),
 ('Saco Metalizado  para Alimentos', 150, 'Saco metalizado com fecho zip para embalar alimentos', 'Alimentícia', 'Metalizado', '/assets/img/saco-metalizado.jpg'),
-('Tubo de Alumínio Flexível', 75, 'Tubo de alumínio para cremes e pomadas.', 'Alimenticia', 'Alumínio', '/assets/img/saco-de-plastico.jpg');
+('tubo bisnaga de Alumínio Flexível', 75, 'bisnaga de alumínio para cremes e pomadas.', 'cosmetico', 'Alumínio', '/assets/img/tubo-bisnaga.jpg');
 
