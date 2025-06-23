@@ -1,4 +1,4 @@
-<div *ngIf="embalagemDetalhe">
+<div class="detalhe-embalagem-container" *ngIf="embalagemDetalhe">
     <h2>Detalhes da Embalagem</h2>
     <img [src]="embalagemDetalhe.urlimg" [alt]="embalagemDetalhe.nome">
     <p><strong>ID:</strong> {{ embalagemDetalhe.id }}</p>
@@ -10,7 +10,7 @@
     <button routerLink="/servicos">Voltar para Serviços</button>
 </div>
 
-<div *ngIf="!embalagemDetalhe">
+<div class="carregando-mensagem" *ngIf="!embalagemDetalhe">
     <p>Carregando detalhes da embalagem...</p>
     <button routerLink="/servicos">Voltar para Serviços</button>
 </div>
