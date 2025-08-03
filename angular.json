@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "projeto_t": {
+    "projeto_T": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,12 +13,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/projeto_t",
+            "outputPath": "dist/projeto-t",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js",
-              "@angular/localize/init"
+              "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -28,7 +27,6 @@
               }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -66,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "projeto_t:build:production"
+              "buildTarget": "projeto_T:build:production"
             },
             "development": {
-              "buildTarget": "projeto_t:build:development"
+              "buildTarget": "projeto_T:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,8 +80,7 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing",
-              "@angular/localize/init"
+              "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
@@ -102,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "c7bfe24b-4cae-4ee7-9f2e-048f77907594"
+    "analytics": "68774d52-8024-4e10-84c7-bfd63f15b353"
   }
 }
