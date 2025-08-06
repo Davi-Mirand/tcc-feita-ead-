@@ -28,6 +28,13 @@ body {
     color: var(--cor-quintinaria);
 }
 
-[vw] {
-    all: unset;
+/* Aumenta o tamanho do botão VLibras */
+[vw-access-button] {
+    width: 150px !important;
+    height: 150px !important;
+    bottom: 24px !important;
+    right: 24px !important;
+    z-index: 9999 !important;
+    /* Opcional: aumenta o ícone dentro do botão */
+    background-size: 60px 60px !important;
 }
