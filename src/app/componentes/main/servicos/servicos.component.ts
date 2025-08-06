@@ -24,7 +24,7 @@ interface EmbalagemDetalhe {
 export class ServicosComponent implements OnInit {
   embalagens: { id: number; nome: string; quantidade: number; urlimg: string }[] = [];
   private apiUrl = 'http://localhost/backend/embalagens.php';
-  private apiUrlDetalhe = 'http://localhost/backend/detalhe-embalagem.php';
+  
 
   constructor(private http: HttpClient, private router: Router) { }
 

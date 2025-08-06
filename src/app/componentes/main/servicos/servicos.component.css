@@ -149,6 +149,19 @@
     color: #555;
 }
 
+/* Mensagem de não encontrado */
+.not-found-message {
+    text-align: center;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fffbe8;
+    color: #c13b1a;
+    border: 1px dashed #c13b1a;
+    border-radius: 12px;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
 /* Responsividade extra */
 @media (max-width: 600px) {
     .grid-embalagens {

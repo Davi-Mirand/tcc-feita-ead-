@@ -1,4 +1,8 @@
 .site-footer {
+    width: 100%;
+    position:fixed;
+    top: auto;
+    bottom: 0;
     text-align: center;
     padding: 2rem;
     margin-bottom: 0;

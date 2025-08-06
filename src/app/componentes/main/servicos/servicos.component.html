@@ -14,4 +14,8 @@
             </div>
         </div>
     </div>
+    <div *ngIf="embalagens.length === 0" class="not-found-message">
+        <h3>Nenhuma embalagem encontrada.</h3>
+        <p>Por favor, verifique o banco de dados ou tente novamente mais tarde.</p>
+    </div>
 </section>

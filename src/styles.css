@@ -8,13 +8,13 @@
     --cor-terciaria: #c13b1a;
     --cor-quarternaria: #970000;
     --cor-quintinaria: #2b2929;
-    --cor-quinaria:#ff5500;
+    --cor-quinaria: #ff5500;
 
 
-    --cor-fundo:#fff5e0;
+    --cor-fundo: #fff5e0;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     caret-color: transparent;
@@ -26,4 +26,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #a89f9f49;
     color: var(--cor-quintinaria);
+}
+
+[vw] {
+    all: unset;
 }

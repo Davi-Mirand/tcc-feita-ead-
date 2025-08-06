@@ -8,8 +8,8 @@ header('Access-Control-Allow-Methods: GET');
 // Configurações do banco de dados
 $servername = "localhost";
 $username = "root";
-$password = ""; // Sua senha
-$dbname = "embalagens"; // Nome do seu banco de dados
+$password = ""; 
+$dbname = "embalagens";
 
 // Cria a conexão
 $conn = mysqli_connect($servername, $username, $password, $dbname);
