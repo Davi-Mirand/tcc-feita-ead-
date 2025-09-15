@@ -26,6 +26,30 @@ body {
     font-family: Arial, sans-serif;
     background-color: #a89f9f49;
     color: var(--cor-quintinaria);
+    display: flex;
+    flex-direction: column;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+}
+
+app-root {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* O main ocupa todo o espaço disponível entre o cabeçalho e o rodapé */
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* Aumenta o tamanho do botão VLibras */
@@ -37,4 +61,11 @@ body {
     z-index: 9999 !important;
     /* Opcional: aumenta o ícone dentro do botão */
     background-size: 60px 60px !important;
+}
+
+[vw].enabled,
+[vw-access-button],
+[vw-plugin-wrapper] {
+    z-index: 99999 !important;
+    position: fixed !important;
 }

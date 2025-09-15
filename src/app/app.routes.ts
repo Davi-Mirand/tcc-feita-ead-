@@ -6,9 +6,9 @@ import { ServicosComponent } from './componentes/main/servicos/servicos.componen
 import { ServicosDescricaoComponent } from './componentes/main/servicos-descricao/servicos-descricao.component';
 
 export const routes: Routes = [
-    { path: "home", component: HomeComponent ,title: "Home"},
-    { path: "contato", component: ContatoComponent, title: "Contato"},
-    { path: "sobre", component:SobreComponent, title: "Sobre"},
+    { path: "home", component: HomeComponent, title: "Home" },
+    { path: "contato", component: ContatoComponent, title: "Contato" },
+    { path: "sobre", component: SobreComponent, title: "Sobre" },
     { path: "servicos", component: ServicosComponent, title: "Serviços" },
     { path: 'servicos-Descricao/:id', component: ServicosDescricaoComponent },
     { path: "**", redirectTo: "home", pathMatch: "full" }

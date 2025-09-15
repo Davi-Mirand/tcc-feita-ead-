@@ -64,13 +64,13 @@
 }
 
 .outro img{
-    width: 42em;
-    margin: -324px;
+    width: 14em;
+    
 }
 
 .half {
     flex: 1;
-    padding: 2em;
+    padding: 0em;
 }
 
 .cosmetic {
