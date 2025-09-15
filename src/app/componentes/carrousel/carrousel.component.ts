@@ -3,15 +3,16 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-carrousel',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './carrousel.component.html',
   styleUrl: './carrousel.component.css'
 })
 export class CarrouselComponent {
-images: string[] = [
-    'assets/images/image1.jpg',
-    'assets/images/image2.jpg',
-    'assets/images/image3.jpg'
+  images: string[] = [
+    'assets/img/teste.jpg',
+    'assets/img/teste.jpg',
+    'assets/img/teste.jpg'
   ];
 
   currentIndex: number = 0;
