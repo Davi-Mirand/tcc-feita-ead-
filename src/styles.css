@@ -18,6 +18,7 @@
     padding: 0;
     margin: 0;
     caret-color: transparent;
+    box-sizing: border-box;
 }
 
 
@@ -52,20 +53,17 @@ main {
     justify-content: flex-start;
 }
 
-/* Aumenta o tamanho do botão VLibras */
+/* Deixa apenas o botão sempre fixo */
 [vw-access-button] {
-    width: 150px !important;
-    height: 150px !important;
+    z-index: 999999 !important;
+    position: fixed !important;
     bottom: 24px !important;
     right: 24px !important;
-    z-index: 9999 !important;
-    /* Opcional: aumenta o ícone dentro do botão */
-    background-size: 60px 60px !important;
 }
 
-[vw].enabled,
-[vw-access-button],
-[vw-plugin-wrapper] {
-    z-index: 99999 !important;
-    position: fixed !important;
+/* Mantém o wrapper do plugin acima do site, mas sem forçar "fixed" */
+[vw-plugin-wrapper],
+.vw-plugin-wrapper,
+.vw-plugin-top-wrapper {
+    z-index: 999999 !important;
 }
