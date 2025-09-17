@@ -9,6 +9,7 @@
 
 /* Newsletter */
 .footer-newsletter {
+  gap:50px;
   background-color: var(--cor-terciaria);
   padding: 1rem 1.5rem; /* altura menor */
   border-radius: 10px;
@@ -30,6 +31,7 @@
   flex: 1;
   display: flex;
   gap: 0.5rem;
+  align-items: baseline;
 }
 
 .footer-newsletter input[type="email"] {
@@ -45,7 +47,7 @@
   border-radius: 20px;
   border: none;
   background-color: var(--cor-destaque);
-  color: var(--cor-primaria);
+  color: var(--cor-secundaria);
   font-weight: bold;
   cursor: pointer;
   font-size: 1rem; /* texto maior */

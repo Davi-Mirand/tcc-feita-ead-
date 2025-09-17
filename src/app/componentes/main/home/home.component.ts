@@ -1,4 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -6,37 +7,33 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
-  
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+
   ngAfterViewInit() {
-    this.initCarousel();
+    if (isPlatformBrowser(this.platformId)) {
+      this.initCarousel();
+    }
   }
 
   initCarousel() {
-    // Configuração do carrossel
     const carousel = document.querySelector('.carousel') as HTMLElement;
     const slides = document.querySelectorAll('.carousel-slide');
     const indicators = document.querySelectorAll('.indicator');
     const prevButton = document.querySelector('.carousel-prev');
     const nextButton = document.querySelector('.carousel-next');
-    
+
     let currentSlide = 0;
     const slideCount = slides.length;
 
-    // Função para atualizar o carrossel
     const updateCarousel = () => {
       carousel.style.transform = `translateX(-${currentSlide * (100 / slideCount)}%)`;
-      
-      // Atualizar indicadores
       indicators.forEach((indicator, index) => {
-        if (index === currentSlide) {
-          indicator.classList.add('active');
-        } else {
-          indicator.classList.remove('active');
-        }
+        if (index === currentSlide) indicator.classList.add('active');
+        else indicator.classList.remove('active');
       });
     };
 
-    // Event listeners para os botões
     if (nextButton) {
       nextButton.addEventListener('click', () => {
         currentSlide = (currentSlide + 1) % slideCount;
@@ -51,7 +48,6 @@ export class HomeComponent implements AfterViewInit {
       });
     }
 
-    // Event listeners para os indicadores
     indicators.forEach((indicator, index) => {
       indicator.addEventListener('click', () => {
         currentSlide = index;
@@ -59,7 +55,6 @@ export class HomeComponent implements AfterViewInit {
       });
     });
 
-    // Auto-avanço do carrossel
     setInterval(() => {
       currentSlide = (currentSlide + 1) % slideCount;
       updateCarousel();

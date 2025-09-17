@@ -12,6 +12,9 @@
 
 
     --cor-fundo: #fff5e0;
+
+    --borda-arredondada: 12px;
+    --transicao: all 0.3s ease;
 }
 
 * {
