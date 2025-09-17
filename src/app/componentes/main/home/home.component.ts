@@ -1,8 +1,11 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
+  standalone: true, // ← Adicione esta linha
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -29,8 +32,11 @@ export class HomeComponent implements AfterViewInit {
     const updateCarousel = () => {
       carousel.style.transform = `translateX(-${currentSlide * (100 / slideCount)}%)`;
       indicators.forEach((indicator, index) => {
-        if (index === currentSlide) indicator.classList.add('active');
-        else indicator.classList.remove('active');
+        if (index === currentSlide) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
       });
     };
 
@@ -55,6 +61,7 @@ export class HomeComponent implements AfterViewInit {
       });
     });
 
+    // Auto-advance every 5 seconds
     setInterval(() => {
       currentSlide = (currentSlide + 1) % slideCount;
       updateCarousel();

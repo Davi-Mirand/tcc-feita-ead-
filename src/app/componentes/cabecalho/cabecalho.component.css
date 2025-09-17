@@ -19,6 +19,13 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+.img-logo:hover {
+    transform: scale(1.5);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
 .navbar-desktop {
     display: flex;
     justify-content: center; /* Centraliza os links no espaço disponível */
