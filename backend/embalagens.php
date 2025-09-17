@@ -1,7 +1,5 @@
 <?php
-// Arquivo PHP (exemplo: api/embalagens.php)
-
-header('Content-Type: application/json');
+header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET');
 
@@ -11,26 +9,24 @@ $username = "root";
 $password = ""; 
 $dbname = "embalagens";
 
+// Ativar erros do mysqli (útil p/ debug)
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 // Cria a conexão
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
+$conn->set_charset("utf8");
 
-// Verifica a conexão
-if (!$conn) {
-    die(json_encode(["erro" => "Falha na conexão com o MySQL: " . mysqli_connect_error()]));
+// Consulta
+$sql = "SELECT id, nome, quantidade, descricao, tipo_embalagem, material, urlimg 
+        FROM tipos_embalagem";
+$result = $conn->query($sql);
+
+$embalagens = [];
+while ($row = $result->fetch_assoc()) {
+    $embalagens[] = $row;
 }
 
-$sql = "SELECT id, nome, quantidade, urlimg FROM tipos_embalagem";
-$result = mysqli_query($conn, $sql);
+// Sempre retorna algo
+echo json_encode($embalagens, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
-$embalagens = array();
-if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $embalagens[] = $row;
-    }
-}
-
-mysqli_free_result($result);
-mysqli_close($conn);
-
-echo json_encode($embalagens);
-?>
+$conn->close();
