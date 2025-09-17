@@ -1,11 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-rodape',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './rodape.component.html',
-  styleUrl: './rodape.component.css'
+  styleUrls: ['./rodape.component.css']
 })
-export class RodapeComponent {
-
-}
+export class RodapeComponent {}

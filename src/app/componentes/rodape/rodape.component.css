@@ -1,9 +1,172 @@
-.site-footer {
-    width: 100%;
-    text-align: center;
-    padding: 2rem;
-    margin-bottom: 0;
-    background-color: var(--cor-quintinaria);
-    color: var(--cor-secundaria);
-    flex-shrink: 0;
+/* Rodapé principal */
+.footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  font-family: 'Arial', sans-serif;
+  padding: 2rem 2rem 1.5rem; /* altura menor */
+  font-size: 1rem; /* texto maior */
+}
+
+/* Newsletter */
+.footer-newsletter {
+  background-color: var(--cor-terciaria);
+  padding: 1rem 1.5rem; /* altura menor */
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem; /* espaçamento menor */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.newsletter-title {
+  font-size: 1.3rem; /* texto maior */
+  font-weight: bold;
+  color: var(--cor-destaque);
+}
+
+.newsletter-input {
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-newsletter input[type="email"] {
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  border: none;
+  flex: 1;
+  font-size: 1rem; /* texto maior */
+}
+
+.footer-newsletter button {
+  padding: 0.6rem 1.5rem;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem; /* texto maior */
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+  transform: scale(1.05);
+  background-color: var(--cor-fundo);
+  color: var(--cor-primaria);
+}
+
+/* Conteúdo principal */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 180px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem; /* título maior */
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--cor-destaque);
+  border-bottom: 2px solid var(--cor-destaque);
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+/* Links do rodapé */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links li a {
+  color: var(--cor-fundo);
+  text-decoration: none;
+  font-size: 1.05rem; /* links maiores */
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: var(--cor-destaque);
+}
+
+/* Redes sociais com FTS */
+.footer-social {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.footer-social a img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-social a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 0.8rem;
+}
+
+.type {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-newsletter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-newsletter input[type="email"] {
+    margin-right: 0;
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+}
+
+.footer-social a img {
+  width: 40px;        /* largura igual */
+  height: 40px;       /* altura igual */
+  border-radius: 50%; /* mantém o círculo */
+  object-fit: contain; /* ajusta imagens diferentes para caber */
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-social a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
 }

@@ -2,7 +2,6 @@
   <div class="hero-overlay">
     <div class="container">
       <div class="hero-content">
-
         <div class="hero-left">
           <h1>Representação <span>Embalagem</span></h1>
           <p class="hero-subtitle">
@@ -19,14 +18,45 @@
         </div>
 
         <div class="hero-right">
-          <app-carrousel></app-carrousel>
+          <div class="carousel-container">
+            <div class="carousel">
+              <div class="carousel-slide active">
+                <div class="slide-content">
+                  <h3>Embalagens Premium</h3>
+                  <p>Soluções de alta qualidade para seus produtos</p>
+                </div>
+                <div class="slide-image" style="background-color: #4A7C59;"></div>
+              </div>
+              <div class="carousel-slide">
+                <div class="slide-content">
+                  <h3>Embalagens Sustentáveis</h3>
+                  <p>Opções ecológicas para sua empresa</p>
+                </div>
+                <div class="slide-image" style="background-color: #739E82;"></div>
+              </div>
+              <div class="carousel-slide">
+                <div class="slide-content">
+                  <h3>Embalagens Personalizadas</h3>
+                  <p>Design exclusivo para sua marca</p>
+                </div>
+                <div class="slide-image" style="background-color: #D8A31A;"></div>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-prev">&#10094;</button>
+              <button class="carousel-next">&#10095;</button>
+            </div>
+            <div class="carousel-indicators">
+              <span class="indicator active" data-slide="0"></span>
+              <span class="indicator" data-slide="1"></span>
+              <span class="indicator" data-slide="2"></span>
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- Services Section -->
 <section class="services">
@@ -39,7 +69,7 @@
     <div class="services-showcase">
       <div class="service-item">
         <div class="service-icon">
-          <i class="icon">🤝</i>
+          <span class="icon">🤝</span>
         </div>
         <h3>Representação Comercial</h3>
         <p>Conectamos fabricantes e varejistas com os melhores produtos do mercado nacional e internacional</p>
@@ -47,7 +77,7 @@
       
       <div class="service-item">
         <div class="service-icon">
-          <i class="icon">🚀</i>
+          <span class="icon">🚀</span>
         </div>
         <h3>Consultoria Especializada</h3>
         <p>Assessoria técnica para seleção das embalagens mais adequadas para cada tipo de produto</p>
@@ -55,7 +85,7 @@
       
       <div class="service-item">
         <div class="service-icon">
-          <i class="icon">📦</i>
+          <span class="icon">📦</span>
         </div>
         <h3>Logística e Distribuição</h3>
         <p>Entregamos em todo território nacional com agilidade, segurança e rastreamento</p>
@@ -75,7 +105,6 @@
     <div class="products-grid">
       <div class="product-card">
         <div class="product-image">
-          <!-- Espaço para imagem do produto 1 -->
           <div class="image-placeholder">
             <span>Embalagem Premium</span>
           </div>
@@ -89,7 +118,6 @@
       
       <div class="product-card">
         <div class="product-image">
-          <!-- Espaço para imagem do produto 2 -->
           <div class="image-placeholder">
             <span>Embalagem Ecológica</span>
           </div>
@@ -103,7 +131,6 @@
       
       <div class="product-card">
         <div class="product-image">
-          <!-- Espaço para imagem do produto 3 -->
           <div class="image-placeholder">
             <span>Embalagem Personalizada</span>
           </div>
@@ -151,7 +178,6 @@
       </div>
       
       <div class="about-image">
-        <!-- Espaço para imagem sobre nós -->
         <div class="image-placeholder large">
           <span>Imagem Corporativa</span>
         </div>
@@ -171,34 +197,40 @@
     <div class="testimonial-grid">
       <div class="testimonial-card">
         <div class="testimonial-content">
-          <div class="quote-icon">"</div>
           <p>Site super fácil de navegar! Consegui encontrar tudo rapidamente e o atendimento foi excelente. As embalagens chegaram perfeitamente e dentro do prazo.</p>
         </div>
         <div class="testimonial-author">
-          <h4>Maria Silva</h4>
-          <p>Diretora, Empresa de Alimentos</p>
+          <div class="testimonial-author-avatar">MS</div>
+          <div class="testimonial-author-info">
+            <h4>Maria Silva</h4>
+            <p>Diretora, Empresa de Alimentos</p>
+          </div>
         </div>
       </div>
       
       <div class="testimonial-card">
         <div class="testimonial-content">
-          <div class="quote-icon">"</div>
           <p>Ótimo atendimento, tiraram todas as minhas dúvidas em minutos e me ajudaram a escolher o produto ideal para minha linha de alimentos gourmet.</p>
         </div>
         <div class="testimonial-author">
-          <h4>João Pereira</h4>
-          <p>Gerente, Rede de Supermercados</p>
+          <div class="testimonial-author-avatar">JP</div>
+          <div class="testimonial-author-info">
+            <h4>João Pereira</h4>
+            <p>Gerente, Rede de Supermercados</p>
+          </div>
         </div>
       </div>
       
       <div class="testimonial-card">
         <div class="testimonial-content">
-          <div class="quote-icon">"</div>
           <p>Entrega rápida e os produtos chegaram impecáveis, recomendo! Já fechamos várias parcerias e sempre com resultados excepcionais.</p>
         </div>
         <div class="testimonial-author">
-          <h4>Fernanda Rocha</h4>
-          <p>CEO, Indústria Alimentícia</p>
+          <div class="testimonial-author-avatar">FR</div>
+          <div class="testimonial-author-info">
+            <h4>Fernanda Rocha</h4>
+            <p>CEO, Indústria Alimentícia</p>
+          </div>
         </div>
       </div>
     </div>
@@ -215,35 +247,30 @@
     
     <div class="partners-grid">
       <div class="partner-logo">
-        <!-- Espaço para logo parceiro 1 -->
         <div class="logo-placeholder">
           <span>Marca 1</span>
         </div>
       </div>
       
       <div class="partner-logo">
-        <!-- Espaço para logo parceiro 2 -->
         <div class="logo-placeholder">
           <span>Marca 2</span>
         </div>
       </div>
       
       <div class="partner-logo">
-        <!-- Espaço para logo parceiro 3 -->
         <div class="logo-placeholder">
           <span>Marca 3</span>
         </div>
       </div>
       
       <div class="partner-logo">
-        <!-- Espaço para logo parceiro 4 -->
         <div class="logo-placeholder">
           <span>Marca 4</span>
         </div>
       </div>
       
       <div class="partner-logo">
-        <!-- Espaço para logo parceiro 5 -->
         <div class="logo-placeholder">
           <span>Marca 5</span>
         </div>
