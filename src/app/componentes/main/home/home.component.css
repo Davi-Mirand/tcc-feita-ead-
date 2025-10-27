@@ -27,6 +27,11 @@ body {
   overflow-x: hidden;
 }
 
+.Destacados{
+  color:#ba3e00 !important;
+  text-decoration: dashed;
+}
+
 h1, h2, h3, h4 {
   font-weight: 700;
   line-height: 1.3;
@@ -356,7 +361,7 @@ section {
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--cor-primaria);
+  color: var(--cor-primaria) !important;
   margin-bottom: 0.5rem;
 }
 
@@ -493,6 +498,7 @@ section {
   transform: scale(1.05);
   box-shadow: var(--sombra-suave);
   background: white;
+  color: #2D2D2D !important;
 }
 
 .logo-placeholder {

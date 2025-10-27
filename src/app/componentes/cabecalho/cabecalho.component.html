@@ -1,40 +1,49 @@
 <header class="cabecalho">
-    <div class="logo"><a routerLink="/home"><img src="/assets/img/ead.png" class="img-logo"></a></div>
+    <div class="logo">
+        <a routerLink="/home"><img src="/assets/img/ead.png" class="img-logo" alt="Logo"></a>
+    </div>
 
     <nav class="navbar-desktop">
         <a routerLink="/home" routerLinkActive="active">
             <img src="/assets/home.svg" alt="home">
-            <span>Início</span>
+            <span class="text-link">Início</span>
         </a>
         <a routerLink="/sobre" routerLinkActive="active">
             <img src="/assets/info.svg" alt="Sobre Nos">
-            <span>Sobre Nós</span>
+            <span class="text-link">Sobre Nós</span>
         </a>
         <a routerLink="/servicos" routerLinkActive="active">
             <img src="/assets/services.svg" alt="serviços">
-            <span>Serviços</span>
+            <span class="text-link">Serviços</span>
         </a>
         <a routerLink="/contato" routerLinkActive="active">
             <img src="/assets/call.svg" alt="contato">
-            <span>Contato</span>
+            <span class="text-link">Contato</span>
         </a>
     </nav>
 
+    <!-- Botão de tema movido para depois da nav -->
+    <div class="theme-toggle">
+        <button class="btn-theme" (click)="toggleTheme()" [attr.aria-pressed]="isDark" aria-label="Alternar tema">
+            <img [src]="isDark ? '/assets/sun.svg' : '/assets/moon.svg'" [alt]="isDark ? 'Modo claro' : 'Modo escuro'"
+                class="theme-icon">
+        </button>
+    </div>
 
     <div class="menu-mobile">
         <input type="checkbox" id="menu" hidden />
         <label for="menu" class="menu-sanduiche"></label>
         <nav class="navbar-mobile">
-            <a routerLink="/home" routerLinkActive="active">
+            <a routerLink="/home" routerLinkActive="active" class="texto-branco">
                 <img src="/assets/home.svg" alt="home" style="width:22px;margin-right:8px;">Início
             </a>
-            <a routerLink="/sobre" routerLinkActive="active">
+            <a routerLink="/sobre" routerLinkActive="active" class="texto-branco">
                 <img src="/assets/info.svg" alt="Sobre" style="width:22px;margin-right:8px;">Sobre Nós
             </a>
-            <a routerLink="/servicos" routerLinkActive="active">
+            <a routerLink="/servicos" routerLinkActive="active" class="texto-branco">
                 <img src="/assets/services.svg" alt="Serviços" style="width:22px;margin-right:8px;">Serviços
             </a>
-            <a routerLink="/contato" routerLinkActive="active">
+            <a routerLink="/contato" routerLinkActive="active" class="texto-branco">
                 <img src="/assets/call.svg" alt="Contato" style="width:22px;margin-right:8px;">Contato
             </a>
         </nav>

@@ -1,7 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-
-
-
+/* =========================
+   VARIÁVEIS GERAIS
+========================= */
 :root {
     --cor-primaria: #ba3e00;
     --cor-secundaria: #ffffff;
@@ -9,64 +8,225 @@
     --cor-quarternaria: #970000;
     --cor-quintinaria: #2b2929;
     --cor-quinaria: #ff5500;
-
-
     --cor-fundo: #fff5e0;
-
     --borda-arredondada: 12px;
     --transicao: all 0.3s ease;
+    --texto-claro: #000000;
+    --texto-escuro: #444444;
+    --fundo-escuro: #181717;
+    --cor-cinza: var(--cor-quintinaria);
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    caret-color: transparent;
-    box-sizing: border-box;
+.texto-branco{
+    color: var(--cor-secundaria) !important;
+}
+.texto-preto{
+    color: var(--cor-claro) !important;
 }
 
+.Destacados{
+    color: #ba3e00 o !important;
+}
 
+/* =========================
+   ESTILO PADRÃO (MODO DIA)
+========================= */
 body {
-    margin: 0;
+    background-color: var(--cor-fundo);
+    color: var(--texto-claro);
     font-family: Arial, sans-serif;
-    background-color: #a89f9f49;
-    color: var(--cor-quintinaria);
-    display: flex;
-    flex-direction: column;
-}
-
-html,
-body {
-    height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden !important;
 }
 
-app-root {
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
+.navbar-desktop a,
+.navbar-mobile a,
+.navbar-desktop a span,
+.navbar-mobile a span {
+    color: #fff !important;
+    /* Links do menu sempre brancos */
 }
 
-/* O main ocupa todo o espaço disponível entre o cabeçalho e o rodapé */
-main {
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+section,
+.card,
+.sobre,
+.about,
+.services,
+.hero,
+.featured-products {
+    background: #e7dfdf !important;
+    color: var(--cor-primaria) !important;
 }
 
-/* Deixa apenas o botão sempre fixo */
-[vw-access-button] {
-    z-index: 999999 !important;
-    position: fixed !important;
-    bottom: 24px !important;
-    right: 24px !important;
+.bg-yellow,
+section.bg-yellow {
+    background: #fff5e0 !important;
+    color: var(--cor-primaria) !important;
 }
 
-/* Mantém o wrapper do plugin acima do site, mas sem forçar "fixed" */
-[vw-plugin-wrapper],
-.vw-plugin-wrapper,
-.vw-plugin-top-wrapper {
-    z-index: 999999 !important;
+.bg-yellow h1,
+.bg-yellow h2,
+.bg-yellow h3,
+.bg-yellow h4,
+section.bg-yellow h1,
+section.bg-yellow h2,
+section.bg-yellow h3,
+section.bg-yellow h4 {
+    color: var(--cor-primaria) !important;
 }
+
+/* =========================
+   MODO NOITE (DARK THEME)
+========================= */
+body.dark-theme {
+    background-color: var(--fundo-escuro);
+    color: var(--texto-escuro);
+}
+
+body.dark-theme section,
+body.dark-theme .card,
+body.dark-theme .featured-products .card {
+    background: #181717 !important;
+    color: #e6e6e6 !important;
+}
+
+/* Links do menu continuam brancos */
+body.dark-theme .navbar-desktop a,
+body.dark-theme .navbar-mobile a {
+    color: #fff !important;
+}
+
+/* Títulos continuam laranja no dark */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme .section-header h2,
+body.dark-theme .hero h1 {
+    color: var(--cor-primaria) !important;
+}
+
+body.dark-theme .section-header h2 span {
+    color: var(--cor-primaria) !important;
+}
+
+/* Outros ajustes para dark theme */
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+    background-color: #1f1f1f;
+    color: #fff;
+    border-color: #333;
+}
+
+/* Botão de tema */
+.btn-theme {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    color: inherit;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 420ms cubic-bezier(.2, .9, .2, 1), box-shadow 220ms, opacity 220ms;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    will-change: transform, opacity;
+}
+
+/* efeito de foco/hover */
+.btn-theme:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* efeito de clique */
+.btn-theme:active {
+    transform: translateY(0) scale(0.96);
+}
+
+/* animação ao alternar tema (gira o botão quando o tema muda) */
+.btn-theme {
+    transition: transform 420ms cubic-bezier(.2, .9, .2, 1), box-shadow 220ms, opacity 220ms;
+    will-change: transform, opacity;
+}
+
+/* quando o tema escuro for ativado, aplica uma rotação suave no botão */
+body.dark-theme .btn-theme {
+    transform: rotate(360deg) scale(1.02);
+}
+
+/* pequena animação de alternância (quando o tema muda) */
+.btn-theme .icon-moon,
+.btn-theme .icon-sun {
+    display: inline-block;
+    transition: transform 300ms, opacity 300ms;
+}
+
+.btn-theme .icon-moon {
+    transform-origin: center;
+}
+
+.btn-theme .icon-sun {
+    transform-origin: center;
+}
+
+/* quando em tema escuro, o botão pode inverter visual (ajuste se quiser) */
+body.dark-theme .btn-theme {
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* força textos escuros em fundo claro (garante texto preto quando fundo é branco) */
+body:not(.dark-theme) {
+    color: var(--texto-claro) !important;
+}
+
+body:not(.dark-theme) a,
+body:not(.dark-theme) p,
+body:not(.dark-theme) span,
+body:not(.dark-theme) label {
+    color: var(--texto-claro) !important;
+}
+
+/* garantir que imagens do cabeçalho não invertam no tema escuro (se necessário) */
+body.dark-theme img {
+    filter: none;
+}
+
+/* footer (rodapé) global padrão */
+.rodape {
+    width: 100%;
+    padding: 20px 16px;
+    text-align: center;
+    background: rgba(250, 250, 250, 0.8);
+    color: var(--texto-claro);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    transition: background 300ms, color 300ms;
+}
+
+/* rodapé no tema escuro */
+body.dark-theme .rodape {
+    background: rgba(0, 0, 0, 0.16);
+    color: var(--texto-escuro);
+    border-top-color: rgba(255, 255, 255, 0.06);
+}
+
+/* suaviza transição de cores globais */
+* {
+    transition: color 240ms ease, background-color 240ms ease, border-color 240ms ease;
+}
+
+/* pequenas regras responsivas se necessário */
+@media (max-width: 600px) {
+    .rodape {
+        padding: 16px;
+        font-size: 14px;
+    }
+}
+
+/* Textos brancos em fundo escuro */
+body.dark-theme .about,
+body.dark-theme .about * {
+    color: #fff !important;
+}
+

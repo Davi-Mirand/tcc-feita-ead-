@@ -1,3 +1,5 @@
+.title{color:#fff !important;}
+
 /* Main styles */
 main {
     font-family: 'Poppins', sans-serif;
@@ -167,7 +169,7 @@ main {
     display: inline-block;
     padding: 10px 20px;
     background: linear-gradient(135deg, var(--cor-terciaria) 0%, var(--cor-primaria) 100%);
-    color: white;
+    color: white !important;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 500;

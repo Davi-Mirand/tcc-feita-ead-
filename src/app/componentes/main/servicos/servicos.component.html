@@ -7,7 +7,7 @@
                 <img [src]="embalagem.urlimg" [alt]="embalagem.nome">
             </div>
             <div class="info-embalagem-apresentacao">
-                <h3>{{ embalagem.nome }}</h3>
+                <h3 class="Destaque">{{ embalagem.nome }}</h3>
                 <p class="id-embalagem">ID: {{ embalagem.id }}</p>
                 <p class="quantidade-embalagem">Quantidade: {{ embalagem.quantidade }}</p>
                 <a class="ver-detalhes" (click)="navegarParaDetalhe(embalagem.id)">Ver Detalhes</a>
