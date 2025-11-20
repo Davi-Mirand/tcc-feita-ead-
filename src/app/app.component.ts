@@ -17,12 +17,13 @@ export class AppComponent implements OnInit {
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
-    // Aplica tema ao iniciar a aplicação (garante persistência ao recarregar)
-    const theme = localStorage.getItem('theme');
-    if (theme === 'dark') {
-      this.renderer.addClass(document.body, 'dark-theme');
-    } else {
-      this.renderer.removeClass(document.body, 'dark-theme');
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        this.renderer.addClass(document.body, 'dark-theme');
+      } else {
+        this.renderer.removeClass(document.body, 'dark-theme');
+      }
     }
   }
 }

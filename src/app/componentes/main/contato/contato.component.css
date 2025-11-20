@@ -1,10 +1,70 @@
-.title{color:#fff !important;}
+.title {
+    color: #fff !important;
+}
 
 /* Main styles */
 main {
     font-family: 'Poppins', sans-serif;
     color: #333;
     overflow-x: hidden;
+}
+
+.container-titulo {
+    padding: 4em 2em;
+    background-color: var(--cor-terciaria);
+    text-align: center;
+}
+
+.container-titulo h1 {
+    color: var(--cor-secundaria);
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.container-titulo p {
+    color: var(--cor-secundaria);
+    font-size: 1.2em;
+}
+
+.container-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 3em 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container-conteudo section {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--cor-quarternaria);
+    color: var(--cor-secundaria);
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    justify-content: center;
+}
+
+section h2 img {
+    width: 28px;
+    height: 28px;
+}
+
+section h3 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: var(--cor-quintinaria);
 }
 
 /* Hero section */
@@ -27,7 +87,7 @@ main {
     height: 200%;
     top: -50%;
     left: -50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
     transform: rotate(30deg);
     animation: pulse 15s infinite linear;
 }
@@ -43,7 +103,7 @@ main {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .subtitle {
@@ -99,7 +159,7 @@ main {
     border-radius: 15px;
     padding: 30px 25px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -119,7 +179,7 @@ main {
 
 .contact-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .contact-card:hover::before {
@@ -189,7 +249,7 @@ main {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .form-container {
@@ -223,13 +283,40 @@ main {
     color: #666;
 }
 
+/* Campos do formulário com fundo escuro e texto branco */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    background: #ffffff;
+    color: #1f1e1e;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+.contact-form label {
+    color: #fff;
+}
+
+.contact-form select option {
+    background: #232323;
+    color: #fff;
+}
+
 /* Form styles */
 .form-group {
     position: relative;
     margin-bottom: 30px;
 }
 
-.form-group input, 
+.form-group input,
 .form-group textarea,
 .form-group select {
     font-size: 16px;
@@ -242,7 +329,7 @@ main {
     transition: all 0.3s ease;
 }
 
-.form-group input:focus, 
+.form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
     outline: none;
@@ -260,12 +347,12 @@ main {
     transition: 0.2s ease all;
 }
 
-.form-group input:focus ~ label, 
-.form-group input:valid ~ label,
-.form-group textarea:focus ~ label,
-.form-group textarea:valid ~ label,
-.form-group select:focus ~ label,
-.form-group select:valid ~ label {
+.form-group input:focus~label,
+.form-group input:valid~label,
+.form-group textarea:focus~label,
+.form-group textarea:valid~label,
+.form-group select:focus~label,
+.form-group select:valid~label {
     top: -20px;
     font-size: 14px;
     color: var(--cor-terciaria);
@@ -287,7 +374,8 @@ main {
     width: 100%;
 }
 
-.bar:before, .bar:after {
+.bar:before,
+.bar:after {
     content: '';
     height: 2px;
     width: 0;
@@ -305,17 +393,17 @@ main {
     right: 50%;
 }
 
-.form-group input:focus ~ .bar:before, 
-.form-group input:focus ~ .bar:after,
-.form-group textarea:focus ~ .bar:before,
-.form-group textarea:focus ~ .bar:after,
-.form-group select:focus ~ .bar:before,
-.form-group select:focus ~ .bar:after {
+.form-group input:focus~.bar:before,
+.form-group input:focus~.bar:after,
+.form-group textarea:focus~.bar:before,
+.form-group textarea:focus~.bar:after,
+.form-group select:focus~.bar:before,
+.form-group select:focus~.bar:after {
     width: 50%;
 }
 
 .submit-btn {
-    background: linear-gradient(135deg, var(--cor-terciaria), var(--cor-secundaria));
+    background-color: var(--cor-terciaria);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -331,6 +419,7 @@ main {
 
 .submit-btn:hover {
     transform: translateY(-2px);
+
     box-shadow: 0 6px 20px rgba(var(--cor-terciaria-rgb), 0.4);
 }
 
@@ -344,7 +433,7 @@ main {
     display: inline-block;
     width: 20px;
     height: 20px;
-    border: 3px solid rgba(255,255,255,0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     border-top-color: white;
     animation: spin 1s ease-in-out infinite;
@@ -369,19 +458,39 @@ main {
 
 /* Animations */
 @keyframes pulse {
-    0% { transform: rotate(30deg) translateX(-50%) translateY(-50%) scale(1); }
-    50% { transform: rotate(30deg) translateX(-50%) translateY(-50%) scale(1.1); }
-    100% { transform: rotate(30deg) translateX(-50%) translateY(-50%) scale(1); }
+    0% {
+        transform: rotate(30deg) translateX(-50%) translateY(-50%) scale(1);
+    }
+
+    50% {
+        transform: rotate(30deg) translateX(-50%) translateY(-50%) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(30deg) translateX(-50%) translateY(-50%) scale(1);
+    }
 }
 
 @keyframes scroll {
-    0% { opacity: 0; transform: rotate(45deg) translate(-20px, -20px); }
-    50% { opacity: 1; }
-    100% { opacity: 0; transform: rotate(45deg) translate(20px, 20px); }
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Responsive styles */
@@ -389,23 +498,23 @@ main {
     .hero-section h1 {
         font-size: 2.5rem;
     }
-    
+
     .subtitle {
         font-size: 1.2rem;
     }
-    
+
     .contact-cards {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-form-section {
         flex-direction: column;
     }
-    
+
     .form-container {
         padding: 30px;
     }
-    
+
     .form-image {
         padding: 30px;
     }
@@ -415,74 +524,12 @@ main {
     .hero-section h1 {
         font-size: 2rem;
     }
-    
+
     .contact-card {
         padding: 20px 15px;
     }
-}main {
-    background-color: var(--cor-fundo);
-    font-family: Arial, sans-serif;
 }
 
-.container-titulo {
-    padding: 4em 2em;
-    background-color: var(--cor-terciaria);
-    text-align: center;
-}
-
-.container-titulo h1 {
-    color: var(--cor-secundaria);
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-}
-
-.container-titulo p {
-    color: var(--cor-secundaria);
-    font-size: 1.2em;
-}
-
-.container-conteudo {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    padding: 3em 2em;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.container-conteudo section {
-    background-color: #fff;
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-section h2 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--cor-quarternaria);
-    color: var(--cor-secundaria);
-    padding: 0.5em 1em;
-    border-radius: 6px;
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    justify-content: center;
-}
-
-section h2 img {
-    width: 28px;
-    height: 28px;
-}
-
-section h3 {
-    font-size: 1.2em;
-    margin: 0.5em 0;
-    color: var(--cor-quintinaria);
-}
-
-/* Responsivo */
 @media (max-width: 600px) {
     .container-titulo h1 {
         font-size: 2em;

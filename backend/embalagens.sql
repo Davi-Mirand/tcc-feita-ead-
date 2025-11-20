@@ -52,3 +52,14 @@ INSERT INTO tipos_embalagem (nome, quantidade, descricao, tipo_embalagem, materi
  'Embalagem de polietileno de baixa densidade (PEBD), ideal para sacos plásticos, filmes e embalagens flexíveis. Material macio, flexível, com boa transparência e resistência química. Facilita o armazenamento e transporte de diversos produtos.',
  'Cosmético', 'Alumínio', '/assets/img/polietileno-de-baixa-densidade.jpg');
 
+-- Criação da tabela 'contato' (caso não exista)
+CREATE TABLE IF NOT EXISTS contato (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(30),
+    assunto VARCHAR(50) NOT NULL,
+    mensagem TEXT NOT NULL,
+    data_envio DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
