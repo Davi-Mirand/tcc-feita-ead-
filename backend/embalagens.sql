@@ -74,3 +74,10 @@ CREATE TABLE IF NOT EXISTS pedido (
     data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Criação da tabela 'newsletter' (caso não exista)
+CREATE TABLE IF NOT EXISTS newsletter (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(120) NOT NULL,
+    data_inscricao DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+

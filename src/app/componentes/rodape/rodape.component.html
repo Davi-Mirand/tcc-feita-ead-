@@ -4,8 +4,8 @@
   <div class="footer-newsletter">
     <span class="newsletter-title">Inscreva-se na nossa newsletter</span>
     <div class="newsletter-input">
-      <input type="email" placeholder="Digite seu e-mail" />
-      <button>Inscrever</button>
+      <input type="email" [(ngModel)]="newsletterEmail" placeholder="Digite seu e-mail" />
+      <button (click)="inscreverNewsletter()">Inscrever</button>
     </div>
   </div>
 

@@ -104,6 +104,7 @@
         flex-basis: 80%;
         /* Ocupa mais largura em telas menores */
         margin: 20px 0;
+        width: 90%;
     }
 }
 
