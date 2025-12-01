@@ -1,0 +1,33 @@
+<main>
+    <div class="pedido-container">
+        <h2>Solicitar Pedido de Embalagem</h2>
+        <form [formGroup]="pedidoForm" (ngSubmit)="onSubmit()" class="pedido-form">
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" formControlName="nome" required>
+            </div>
+            <div class="form-group">
+                <label>Descrição</label>
+                <textarea formControlName="descricao" rows="2" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Serviço</label>
+                <input type="text" formControlName="servico" required>
+            </div>
+            <div class="form-group">
+                <label>Embalagem</label>
+                <select formControlName="embalagem" required>
+                    <option value="" disabled selected>Selecione uma embalagem</option>
+                    <option *ngFor="let embalagem of embalagens" [value]="embalagem.nome">
+                        {{ embalagem.nome }}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Quantidade</label>
+                <input type="number" formControlName="quantidade" min="1" required>
+            </div>
+            <button type="submit" [disabled]="!pedidoForm.valid" class="submit-btn">Enviar Pedido</button>
+        </form>
+    </div>
+</main>

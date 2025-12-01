@@ -63,3 +63,14 @@ CREATE TABLE IF NOT EXISTS contato (
     data_envio DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Criação da tabela 'pedido' (caso não exista)
+CREATE TABLE IF NOT EXISTS pedido (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    descricao TEXT NOT NULL,
+    servico VARCHAR(100) NOT NULL,
+    quantidade INT NOT NULL,
+    embalagem VARCHAR(100) NOT NULL,
+    data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
