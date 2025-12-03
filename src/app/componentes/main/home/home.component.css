@@ -497,7 +497,7 @@ section {
 .partner-logo:hover {
   transform: scale(1.05);
   box-shadow: var(--sombra-suave);
-  background: white;
+  background:transparent;
   color: #2D2D2D !important;
 }
 

@@ -18,40 +18,7 @@
         </div>
 
         <div class="hero-right">
-          <div class="carousel-container">
-            <div class="carousel">
-              <div class="carousel-slide active">
-                <div class="slide-content">
-                  <h3>Embalagens Premium</h3>
-                  <p>Soluções de alta qualidade para seus produtos</p>
-                </div>
-                <div class="slide-image" style="background-color: #4A7C59;"></div>
-              </div>
-              <div class="carousel-slide">
-                <div class="slide-content">
-                  <h3>Embalagens Sustentáveis</h3>
-                  <p>Opções ecológicas para sua empresa</p>
-                </div>
-                <div class="slide-image" style="background-color: #739E82;"></div>
-              </div>
-              <div class="carousel-slide">
-                <div class="slide-content">
-                  <h3>Embalagens Personalizadas</h3>
-                  <p>Design exclusivo para sua marca</p>
-                </div>
-                <div class="slide-image" style="background-color: #D8A31A;"></div>
-              </div>
-            </div>
-            <div class="carousel-controls">
-              <button class="carousel-prev">&#10094;</button>
-              <button class="carousel-next">&#10095;</button>
-            </div>
-            <div class="carousel-indicators">
-              <span class="indicator active" data-slide="0"></span>
-              <span class="indicator" data-slide="1"></span>
-              <span class="indicator" data-slide="2"></span>
-            </div>
-          </div>
+          <app-carrousel></app-carrousel>
         </div>
       </div>
     </div>
@@ -65,7 +32,7 @@
       <h2>Nossos <span class="Destacados">Serviços</span></h2>
       <p class="texto-branco">Oferecemos um portfólio completo de soluções em embalagens</p>
     </div>
-    
+
     <div class="services-showcase">
       <div class="service-item">
         <div class="service-icon">
@@ -74,7 +41,7 @@
         <h3>Representação Comercial</h3>
         <p>Conectamos fabricantes e varejistas com os melhores produtos do mercado nacional e internacional</p>
       </div>
-      
+
       <div class="service-item">
         <div class="service-icon">
           <span class="icon">🚀</span>
@@ -82,7 +49,7 @@
         <h3>Consultoria Especializada</h3>
         <p>Assessoria técnica para seleção das embalagens mais adequadas para cada tipo de produto</p>
       </div>
-      
+
       <div class="service-item">
         <div class="service-icon">
           <span class="icon">📦</span>
@@ -101,12 +68,12 @@
       <h2>Produtos <span class="Destacados">Destacados</span></h2>
       <p class="texto-branco">Conheça nossas linhas premium de embalagens</p>
     </div>
-    
+
     <div class="products-grid">
       <div class="product-card">
         <div class="product-image">
           <div class="image-placeholder">
-            <span class="Destacados">Embalagem Premium</span>
+            <span class="Destacados"><img src="assets/img/embalagens-sustentaveis.jpeg" alt=""></span>
           </div>
         </div>
         <div class="product-info">
@@ -115,11 +82,11 @@
           <a href="#" class="product-link">Detalhes →</a>
         </div>
       </div>
-      
+
       <div class="product-card">
         <div class="product-image">
           <div class="image-placeholder">
-            <span class="Destacados">Embalagem Ecológica</span>
+            <span class="Destacados"><img src="assets/img/embalagens-premium.jpeg" alt=""></span>
           </div>
         </div>
         <div class="product-info">
@@ -128,11 +95,11 @@
           <a href="#" class="product-link">Detalhes →</a>
         </div>
       </div>
-      
+
       <div class="product-card">
         <div class="product-image">
           <div class="image-placeholder">
-            <span class="Destacados">Embalagem Personalizada</span>
+            <span class="Destacados"><img src="assets/img/embalagens-personalizaveis.jpeg" alt=""></span>
           </div>
         </div>
         <div class="product-info">
@@ -154,21 +121,22 @@
           <h2>Sobre <span class="Destacados">Nós</span></h2>
           <p class="texto-branco">Excelência em representação de embalagens</p>
         </div>
-        
+
         <div class="about-description">
-          <p>Com mais de 15 anos de experiência no mercado, somos especialistas em conectar fabricantes e varejistas com as melhores soluções em embalagens para alimentos.</p>
-          
+          <p>Com mais de 15 anos de experiência no mercado, somos especialistas em conectar fabricantes e varejistas com
+            as melhores soluções em embalagens para alimentos.</p>
+
           <div class="features-list">
             <div class="feature">
               <span class="feature-number">200+</span>
               <span class="feature-text">Produtos no portfólio</span>
             </div>
-            
+
             <div class="feature">
               <span class="feature-number">15+</span>
               <span class="feature-text">Anos de experiência</span>
             </div>
-            
+
             <div class="feature">
               <span class="feature-number">500+</span>
               <span class="feature-text">Clientes satisfeitos</span>
@@ -176,10 +144,10 @@
           </div>
         </div>
       </div>
-      
+
       <div class="about-image">
         <div class="image-placeholder large">
-          <span>Imagem Corporativa</span>
+          <img src="assets/img/imagem-empresarial.jpeg" alt="">
         </div>
       </div>
     </div>
@@ -193,11 +161,12 @@
       <h2>O que nossos <span class="Destacados">clientes</span> dizem</h2>
       <p class="texto-branco">Confira a opinião de quem já trabalha conosco</p>
     </div>
-    
+
     <div class="testimonial-grid">
       <div class="testimonial-card">
         <div class="testimonial-content">
-          <p >Site super fácil de navegar! Consegui encontrar tudo rapidamente e o atendimento foi excelente. As embalagens chegaram perfeitamente e dentro do prazo.</p>
+          <p>Site super fácil de navegar! Consegui encontrar tudo rapidamente e o atendimento foi excelente. As
+            embalagens chegaram perfeitamente e dentro do prazo.</p>
         </div>
         <div class="testimonial-author">
           <div class="testimonial-author-avatar">MS</div>
@@ -207,10 +176,11 @@
           </div>
         </div>
       </div>
-      
+
       <div class="testimonial-card">
         <div class="testimonial-content">
-          <p>Ótimo atendimento, tiraram todas as minhas dúvidas em minutos e me ajudaram a escolher o produto ideal para minha linha de alimentos gourmet.</p>
+          <p>Ótimo atendimento, tiraram todas as minhas dúvidas em minutos e me ajudaram a escolher o produto ideal para
+            minha linha de alimentos gourmet.</p>
         </div>
         <div class="testimonial-author">
           <div class="testimonial-author-avatar">JP</div>
@@ -220,10 +190,11 @@
           </div>
         </div>
       </div>
-      
+
       <div class="testimonial-card">
         <div class="testimonial-content">
-          <p>Entrega rápida e os produtos chegaram impecáveis, recomendo! Já fechamos várias parcerias e sempre com resultados excepcionais.</p>
+          <p>Entrega rápida e os produtos chegaram impecáveis, recomendo! Já fechamos várias parcerias e sempre com
+            resultados excepcionais.</p>
         </div>
         <div class="testimonial-author">
           <div class="testimonial-author-avatar">FR</div>
@@ -244,35 +215,40 @@
       <h2>Nossos <span class="Destacados">Parceiros</span></h2>
       <p class="texto-branco">Trabalhamos com os principais fabricantes do mercado</p>
     </div>
-    
+
     <div class="partners-grid">
       <div class="partner-logo">
         <div class="logo-placeholder">
-          <span class="texto-branco" >Marca 1</span>
+          <span class="texto-branco"><img src="assets/img/marca1.jpeg" style="border-radius: 20px;" width="100%"
+              alt="marca1"></span>
         </div>
       </div>
-      
+
       <div class="partner-logo">
         <div class="logo-placeholder">
-          <span class="texto-branco">Marca 2</span>
+          <span class="texto-branco"><img src="assets/img/marca2.jpeg" style="border-radius: 20px;" width="100%"
+              alt="marca2"></span>
         </div>
       </div>
-      
+
       <div class="partner-logo">
         <div class="logo-placeholder">
-          <span class="texto-branco">Marca 3</span>
+          <span class="texto-branco"><img src="assets/img/marca3.jpeg" style="border-radius: 20px;" width="100%"
+              alt="marca3"></span>
         </div>
       </div>
-      
+
       <div class="partner-logo">
         <div class="logo-placeholder">
-          <span class="texto-branco">Marca 4</span>
+          <span class="texto-branco"><img src="assets/img/marca4.jpeg" style="border-radius: 20px;" width="100%"
+              alt="marca4"></span>
         </div>
       </div>
-      
+
       <div class="partner-logo">
         <div class="logo-placeholder">
-          <span class="texto-branco">Marca 5</span>
+          <span class="texto-branco"><img src="assets/img/marca5.jpeg" style="border-radius: 20px;" width="100%"
+              alt="marca5"></span>
         </div>
       </div>
     </div>

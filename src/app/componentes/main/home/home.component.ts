@@ -1,11 +1,12 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CarrouselComponent } from "../../carrousel/carrousel.component";
 
 @Component({
   selector: 'app-home',
   standalone: true, // ← Adicione esta linha
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, CarrouselComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

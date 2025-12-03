@@ -1,16 +1,18 @@
-<div class="carousel-container">
-  <div
-    class="carousel-slide"
-    [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
-  >
-    <img
-      *ngFor="let image of images"
-      [src]="image"
-      class="carousel-image"
-      alt="Imagem do carrossel"
-    />
+<div class="carousel">
+  <div class="carousel-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === activeIndex">
+    <div class="slide-img-wrapper">
+      <button class="carousel-btn prev" (click)="prevSlide()">&#10094;</button>
+      <img [src]="slide.img" [alt]="slide.alt" class="slide-image">
+      <button class="carousel-btn next" (click)="nextSlide()">&#10095;</button>
+    </div>
+    <div class="slide-content">
+      <h3>{{ slide.title }}</h3>
+      <p>{{ slide.text }}</p>
+    </div>
   </div>
-
-  <button class="carousel-button left" (click)="prevSlide()">&#10094;</button>
-  <button class="carousel-button right" (click)="nextSlide()">&#10095;</button>
+  <div class="carousel-dots">
+    <button *ngFor="let slide of slides; let i = index" class="carousel-dot" [class.active]="i === activeIndex"
+      (click)="goToSlide(i)">
+    </button>
+  </div>
 </div>
